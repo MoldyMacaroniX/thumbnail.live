@@ -1,0 +1,3 @@
+# https://johnkavanagh.co.uk/writing/redirect-a-default-netlify-subdomain-to-your-custom-domain/
+
+https://aquamarine-pudding-a58adf.netlify.app/*   https://www.thumbnail.live/:splat   301! 
