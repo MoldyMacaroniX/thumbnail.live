@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Metadata -->
+    <title>{{ title or metadata.title }} | Thumbnail.live</title>
+    <meta name="title" content="{{ title or metadata.title }} | Thumbnail.live">
+    <meta name="description" content="{{ desc or metadata.desc }}">
+
+    <!-- Branding -->
+    <meta name="theme-color" content="#FF0000">
+    <link rel="icon" href="/assets/icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/index.css">
+    {% if tool == "thumbnail" or tool == "feed" %}<link rel="stylesheet" href="/assets/thumbnail.css">{% endif %}
+    {% if tool == "comment" %}<link rel="stylesheet" href="/assets/comment.css">{% endif %}
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Opengraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.thumbnail.live/">
+    <meta property="og:title" content="{{ title or metadata.title }} | Thumbnail.live">
+    <meta property="og:description" content="{{ desc or metadata.desc }}">
+    <meta property="og:image" content="/assets/og.png">
+
+    <!-- Twitter since they're different or something -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.thumbnail.live/">
+    <meta property="twitter:title" content="{{ title or metadata.title }} | Thumbnail.live">
+    <meta property="twitter:description" content="{{ desc or metadata.desc }}">
+    <meta property="twitter:image" content="/assets/og.png">
+</head>
+<body class="preload">
+
+    <div class="mobile" id="menu">
+        <i class="ri-close-fill menu-close" id="close" onclick="closeMobile()" onkeydown="if (event.keyCode === 13) {closeMobile()}" tabindex="0"></i>
+        <div style="display: flex; flex-direction: column; height: 100%; width: 100%;">
+            <div class="mobile-padding">
+                <a href="/" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></a>
+            </div>
+            <hr>
+            <a href="/" class="mobile-link">Thumbnail</a>
+            <a href="/feed/" class="mobile-link">In Feed</a>
+            <a href="/comment/" class="mobile-link">Comment</a>
+            <hr>
+            <a href="/support/contact/" class="mobile-link">Contact us</a>
+            <div class="mobile-padding" style="margin-top: auto;">
+                <a href="/support/" class="btn btn-wide">Help Center</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-bg" id="menu-bg" onclick="closeMobile()"></div>
+
+    <div class="navbar-container">
+        <div class="navbar container">
+            <div class="left">
+                <div class="menu-open" onclick="openMobile();" onkeydown="if (event.keyCode === 13) {openMobile()}" id="open" tabindex="0">
+                    <i class="ri-menu-fill"></i>
+                </div>
+                <a href="/" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></a>
+                <div class="items">
+                    <a href="/" class="item{% if page.url == "/" %} active{% endif %}">Thumbnail</a>
+                    <a href="/feed/" class="item{% if page.url == "/feed/" %} active{% endif %}">In Feed</a>
+                    <a href="/comment/" class="item{% if page.url == "/comment/" %} active{% endif %}">Comment</a>
+                </div>
+            </div>
+            <div class="right">
+                <a href="/support/" class="btn"><span class="txt">Help Center</span><span class="icon"><i class="ri-question-fill"></i></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <div class="navbar-spacer"></div>
+
+        {{ content | safe }}
+
+        <div>
+            <div class="container">
+                <div class="alert">
+                    <div class="cols">
+                        <i class="ri-shield-check-fill"></i>
+                        <div class="col">
+                            <div class="alert-heading">
+                                Nothing you upload is stored on our server.
+                            </div>
+                            <div class="alert-desc">
+                                You can rest easy knowing we are not storing anything you upload.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer container">
+                <div class="cols">
+                    <div class="col">
+                        <div style="transform: translateY(-3px);" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></div>
+                        <p>
+                            {{ metadata.desc }}
+                        </p>
+                        <a href="/privacy-policy/" class="foot-link">Privacy Policy</a>
+                    </div>
+                    <div class="col">
+                        <div class="logo">Preview Tools</div>
+                        <a href="/" class="foot-link">Thumbnail</a>
+                        <a href="/feed/" class="foot-link">In Feed</a>
+                        <a href="/comment/" class="foot-link">Comment</a>
+                    </div>
+                    <div class="col">
+                        <div class="logo">Support</div>
+                        <a href="/support/" class="foot-link">Help Center</a>
+                        <a href="/support/contact/" class="foot-link">Contact us</a>
+                        <a href="/about/" class="foot-link">About us</a>
+                    </div>
+                </div>
+                <div class="note">
+                    <div>
+                        Copyright © <span id="year">[current year]</span><script>document.getElementById("year").innerHTML = new Date().getFullYear();</script> Thumbnail.live
+                    </div>
+                    <div>
+                        Thumbnail.live is not associated with YouTube.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var menu = document.getElementById("menu");
+        var menuBg = document.getElementById("menu-bg");
+
+        function openMobile() {
+            document.body.style.overflow = "hidden";
+            menu.style.display = "flex";
+            menuBg.style.display = "block";
+            setTimeout(function(){
+                menu.style.transform = "translateX(0%)";
+                menuBg.style.opacity = "1";
+                document.getElementById("close").focus();
+            }, 10);
+        }
+
+        function closeMobile() {
+            document.body.style.overflow = "unset";
+            menu.style.transform = "translateX(-110%)";
+            menuBg.style.opacity = "0";
+            setTimeout(function(){
+                menu.style.display = "none";
+                menuBg.style.display = "none";
+                document.getElementById("open").focus();
+            }, 250);
+        }
+    </script>
+
+    {% if tool == "thumbnail" or tool == "feed" %}<script src="/assets/thumbnail.js"></script>{% endif %}
+    {% if tool == "feed" %}<script src="/assets/feed.js"></script>{% endif %}
+    {% if tool == "comment" %}<script src="/assets/comment.js"></script>{% endif %}
+
+    <!-- Preload animation stop -->
+    <script>
+        window.onload = (event) => {
+            document.body.classList.remove('preload');
+        };
+    </script>
+
+</body>
+</html>

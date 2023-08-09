@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+<div class="post">
+    <div class="container">
+        <div class="cols">
+            <div class="sidebar">
+                <div class="sidebar-nav">
+                    <div class="sidebar-nav-heading">Help Center</div>
+                    <hr>
+                    <a href="/support/thumbnail/"{% if page.url == "/support/thumbnail/" %} class="active"{% endif %}>Preview Thumbnail Help</a>
+                    <a href="/support/feed/"{% if page.url == "/support/feed/" %} class="active"{% endif %}>Preview In Feed Help</a>
+                    <a href="/support/comment/"{% if page.url == "/support/comment/" %} class="active"{% endif %}>Preview Comment Help</a>
+                    <a href="/support/contact/"{% if page.url == "/support/contact/" %} class="active"{% endif %}>Contact us</a>
+                    <hr>
+                    <div class="sidebar-nav-heading">Policies</div>
+                    <hr>
+                    <a href="/privacy-policy/"{% if page.url == "/privacy-policy/" %} class="active"{% endif %}>Privacy Policy</a>
+                </div>
+            </div>
+            <div class="col">
+                <article class="article">
+                    {{ content | safe }}
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

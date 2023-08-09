@@ -1,0 +1,4 @@
+Sitemap: https://www.thumbnail.live/sitemap.xml
+
+User-agent: *
+Disallow:

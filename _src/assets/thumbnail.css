@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    --thumbnail: url(https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg);
+    --verified: unset;
+    --truncate: 2;
+    --premiere: none;
+    --live: none;
+    --live-time: unset;
+}
+
+.content {
+    width: 331px;
+    min-height: 282px;
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+.thumbnail {
+    background: rgba(255, 255, 255, 0);
+    width: 331px;
+    height: 186px;
+    position: relative;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.thumbnail span {
+    position: absolute;
+    color: white;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 4px;
+    display: var(--live-time);
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    background-image: var(--thumbnail);
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.info {
+    width: 331px;
+    min-height: 96px;
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.text {
+    padding-right: 24px;
+}
+
+.text .videotitle-input {
+    display: block;
+    width: 259px;
+    margin-top: 12px;
+    margin-bottom: 7px;
+    font-size: 1.1em;
+    font-weight: 500;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--truncate);
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.username-input {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 212px;
+}
+
+.text p {
+    font-size: 15px;
+    color: #606060;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.verified {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    margin-bottom: 6px;
+}
+
+.verified svg {
+    height: 100%;
+    width: 100%;
+    fill: #606060;
+    display: var(--verified);
+}
+
+.text .extra {
+    display: block !important;
+    margin-top: -14px;
+    flex: none;
+}
+
+.verified {
+    position: relative;
+    display: inline-block;
+}
+  
+.verified .verified-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(90, 90, 90, 0.9);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px 10px;
+    font-size: 15px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-bottom: 20px;
+
+    display: var(--verified);
+}
+
+.verified:hover .verified-text {
+    visibility: visible;
+}
+
+.name {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+  
+.name .name-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(90, 90, 90, 0.9);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px 10px;
+    font-size: 15px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    margin-bottom: 20px;
+}
+
+.name:hover .name-text {
+    visibility: visible;
+}
+
+.feed-tool .content {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,309 @@
+---
+layout: base.njk
+title: Preview Your YouTube Thumbnail Live
+tool: feed
+---
+
+<div class="main feed-tool">
+    <div class="container">
+        <div class="cols">
+            <form onsubmit="genVideo(); return false;" class="col">
+
+                <div class="input combo">
+                    <label for="thumbnailupload">Upload Thumbnail</label>
+
+                    <div class="upload-btn-wrapper">
+                        <label for="thumbnailupload" class="aspect">
+                            <div id="thumbnailupload-btn" style="background-image: url('https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg');" class="form-btn ratio"><span>Upload File</span></div>
+                        </label>
+                        <input type="file" accept="image/*" id="thumbnailupload" name="thumbnailupload" onchange="uploadThumbnail();genVideo();">
+                    </div>
+
+                    <div class="divider"><span>OR</span></div>
+
+                    <label for="thumbnailurl">Paste Thumbnail URL</label>
+                    <input type="text" id="thumbnailurl" name="thumbnailurl" placeholder="https://example.com/file.png" onchange="genVideo();">
+                    <div class="warn">Leave blank to use uploaded file.</div>
+                </div>
+
+            </form>
+            <form onsubmit="genVideo(); return false;" class="col">
+
+                <div class="input combo">
+                    <label for="avatarupload">Upload Avatar</label>
+
+                    <div class="upload-btn-wrapper">
+                        <label for="avatarupload" class="aspect">
+                            <div id="avatarupload-btn" style="background-image: url('https://www.moldygd.com/assets/logo.png');" class="form-btn ratio"><span>Upload File</span></div>
+                        </label>
+                        <input type="file" accept="image/*" id="avatarupload" name="avatarupload" onchange="uploadAvatar();genVideo();">
+                    </div>
+
+                    <div class="divider"><span>OR</span></div>
+
+                    <label for="avatarurl">Paste Avatar URL</label>
+                    <input type="text" id="avatarurl" name="avatarurl" placeholder="https://example.com/file.png" onchange="genVideo();">
+                    <div class="warn">Leave blank to use uploaded file.</div>
+                </div>
+
+            </form>
+            <form onsubmit="genVideo(); return false;" class="col">
+                <div class="input combo">
+                    <label for="videotitle">Video Title</label>
+                    <input type="text" id="videotitle" name="videotitle" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
+                </div>
+                <div class="input combo">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Moldy" onchange="genVideo();" maxlength="30">
+                </div>
+                <button class="btn btn-wide" onclick="genVideo();">Preview In Feed</button>
+                <button class="btn btn-wide" onclick="genVideos();">Randomize Feed</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="feed-tool">
+    <div class="container">
+        <div class="video-container">
+                
+            <div class="video">
+                
+                <div class="grid-4" id="videofeed">
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="1-length">10:46</span>
+                            <div class="thumbnail-img" id="1-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="1-avatar">
+                            <div class="text">
+                                <div id="1-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="1-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="1-views">4.1K views</span> • <span id="1-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="2-length">10:46</span>
+                            <div class="thumbnail-img" id="2-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="2-avatar">
+                            <div class="text">
+                                <div id="2-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="2-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="2-views">4.1K views</span> • <span id="2-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="3-length">10:46</span>
+                            <div class="thumbnail-img" id="3-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="3-avatar">
+                            <div class="text">
+                                <div id="3-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="3-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="3-views">4.1K views</span> • <span id="3-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="4-length">10:46</span>
+                            <div class="thumbnail-img" id="4-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="4-avatar">
+                            <div class="text">
+                                <div id="4-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="4-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="4-views">4.1K views</span> • <span id="4-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="5-length">10:46</span>
+                            <div class="thumbnail-img" id="5-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="5-avatar">
+                            <div class="text">
+                                <div id="5-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="5-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="5-views">4.1K views</span> • <span id="5-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# REAL ONE #}
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="length">10:46</span>
+                            <div class="thumbnail-img"></div>
+                        </div>
+                        <div class="info">
+                            <img id="avatarurl-input" src="https://www.moldygd.com/assets/logo.png" class="avatar">
+                            <div class="text">
+                                <div id="videotitle-input" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name"><span id="username-input" class="username-input">Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="views">4.1K views</span> • <span id="time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    {# END REAL ONE #}
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="6-length">10:46</span>
+                            <div class="thumbnail-img" id="6-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="6-avatar">
+                            <div class="text">
+                                <div id="6-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="6-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="6-views">4.1K views</span> • <span id="6-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="7-length">10:46</span>
+                            <div class="thumbnail-img" id="7-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="7-avatar">
+                            <div class="text">
+                                <div id="7-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="7-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="7-views">4.1K views</span> • <span id="7-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="8-length">10:46</span>
+                            <div class="thumbnail-img" id="8-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="8-avatar">
+                            <div class="text">
+                                <div id="8-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="8-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="8-views">4.1K views</span> • <span id="8-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="9-length">10:46</span>
+                            <div class="thumbnail-img" id="9-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="9-avatar">
+                            <div class="text">
+                                <div id="9-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="9-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="9-views">4.1K views</span> • <span id="9-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="10-length">10:46</span>
+                            <div class="thumbnail-img" id="10-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="10-avatar">
+                            <div class="text">
+                                <div id="10-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="10-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="10-views">4.1K views</span> • <span id="10-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="thumbnail">
+                            <span id="11-length">10:46</span>
+                            <div class="thumbnail-img" id="11-thumbnail"></div>
+                        </div>
+                        <div class="info">
+                            <img src="https://www.moldygd.com/assets/logo.png" class="avatar" id="11-avatar">
+                            <div class="text">
+                                <div id="11-title" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                                <p><span class="name" id="11-name"><span>Moldy</span></span> <div class="verified">
+                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                                </div></p>
+                                <p class="extra"><span id="11-views">4.1K views</span> • <span id="11-time">2 hours ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="container">
+        <article class="article">
+            <h1>YouTube In Feed Thumbnail Preview</h1>
+            <p>
+                Test your YouTube thumbnail around other videos with Thumbnail.live, the best online YouTube thumbnail previewer.
+            </p>
+            <p>
+                This tool allows you to test your YouTube thumbnail and title around other popular videos.
+            </p>
+            <p>
+                You can submit links to your thumbnail and avatar if its already online and save the hassle of having to find them in your files.
+            </p>
+            <p>
+                Everything you input (excluding uploaded files) is stored on your browser, meaning you don't have to re-enter your avatar link and username every time.
+            </p>
+            <p>
+                Uploaded files are not stored, so if you want to retain your thumbnail and avatar, you always have the option to use links instead.
+            </p>
+        </article>
+    </div>
+</div>
