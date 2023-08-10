@@ -680,13 +680,15 @@ table th:last-of-type {
     width: 300px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     transform: translateX(-110%);
-    transition: transform 0.25s ease
+    transition: transform 0.25s ease;
+    overflow-y: auto;
 }
 
 .mobile hr {
     border: 0px;
     height: 1px;
     width: 100%;
+    flex-shrink: 0;
     background-color: var(--print-border);
 }
 
