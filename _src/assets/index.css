@@ -755,6 +755,9 @@ table th:last-of-type {
         flex: 100%;
         flex-direction: column-reverse;
     }
+    .feed-tool .cols .col {
+        flex-direction: column;
+    }
     .comment-tool .sidebar form {
         flex-direction: row;
     }
