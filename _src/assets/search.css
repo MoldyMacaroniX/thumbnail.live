@@ -17,12 +17,12 @@ body.dark {
 }
 
 .content {
-    width: 331px;
-    min-height: 282px;
     background: rgba(255, 255, 255, 0);
     cursor: pointer;
-    display: block;
+    display: flex;
     margin: auto;
+    gap: 16px;
+    max-width: 1000px;
 }
 
 .thumbnail {
@@ -32,6 +32,7 @@ body.dark {
     position: relative;
     border-radius: 13px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .thumbnail span {
@@ -56,32 +57,27 @@ body.dark {
 }
 
 .info {
-    width: 331px;
-    min-height: 96px;
     display: flex;
     flex-direction: row;
 }
 
 .avatar {
-    height: 36px;
-    width: 36px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    margin-top: 12px;
-    margin-right: 12px;
+    margin-right: 8px;
     object-fit: cover;
 }
 
 .text {
-    padding-right: 24px;
+    font-size: 13.5px;
+    min-width: 220px;
 }
 
 .text .videotitle-input {
     display: block;
-    width: 259px;
-    margin-top: 12px;
-    margin-bottom: 7px;
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 1.4em;
+    /* font-weight: 500; */
     overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -95,10 +91,10 @@ body.dark {
     text-overflow: ellipsis;
     display: block;
     max-width: 212px;
+    font-size: 13.5px;
 }
 
 .text p {
-    font-size: 15px;
     color: var(--yt-txt-dim);
     line-height: 20px;
     margin-top: 0px;
@@ -112,7 +108,6 @@ body.dark {
     display: inline-block;
     margin-left: 5px;
     vertical-align: middle;
-    margin-bottom: 6px;
 }
 
 .verified svg {
@@ -124,8 +119,9 @@ body.dark {
 
 .text .extra {
     display: block !important;
-    margin-top: -14px;
     flex: none;
+    margin-top: 5px;
+    margin-bottom: 12px;
 }
 
 .verified {
@@ -162,6 +158,9 @@ body.dark {
     position: relative;
     display: inline-flex;
     align-items: center;
+    font-size: 15px;
+    color: var(--yt-txt-dim);
+    line-height: 20px;
 }
   
 .name .name-text {
@@ -187,6 +186,12 @@ body.dark {
     visibility: visible;
 }
 
-.feed-tool .content {
-    margin-bottom: 30px;
+.text .extra.description {
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: var(--truncate);
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 1.5;
 }

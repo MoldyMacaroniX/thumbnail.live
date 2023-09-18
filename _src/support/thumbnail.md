@@ -2,7 +2,7 @@
 title: Preview Thumbnail Help
 ---
 
-# Preview Thumbnail Help
+# How To Use This Website
 
 ## Update the thumbnail preview
 
@@ -28,4 +28,4 @@ This does not occur for uploaded files, however. If you want to retain your thum
 
 ## Clear saved inputs
 
-You can clear your saved inputs by clearing the localStorage on our website via your browser.
+You can clear your saved inputs by clearing the localStorage on our website via your browser. This is usually done by clearing your cookies.

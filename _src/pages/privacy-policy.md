@@ -16,7 +16,7 @@ Nothing you upload to our site is stored on our server in any way.
 
 ## localStorage
 
-This website makes use of a technology called localStorage to save what you input to your browser. This data exists solely in your browser and we cannot access it. You can clear this data at any time using your browser.
+This website makes use of a technology called localStorage to save what you input to your browser. This data exists solely in your browser and we cannot access it. You can clear this data at any time using your browser. This is usually done by clearing your cookies.
 
 ## Usage data
 

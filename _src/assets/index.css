@@ -11,6 +11,7 @@ body {
     --bg-border: rgba(255, 255, 255, 0.25);
     --print-border: rgba(0, 0, 0, 0.25);
     --hover: rgba(128, 128, 128, 0.1);
+    --yt-bg: #F9F9F9;
 
     /* Unchanging Colors */
     --primary: rgb(255, 0, 0);
@@ -29,11 +30,16 @@ body {
 }
 
 body.dark {
-    /* Colors */
-    --bg: rgb(10, 10, 10);
+    --bg: rgb(20, 20, 20);
     --print: rgb(255, 255, 255);
-    --bg-border: rgba(0, 0, 0, 0.25);
-    --print-border: rgba(255, 255, 255, 0.25);
+    --print-dim: rgba(255, 255, 255, 0.75);
+    --bg-border: rgba(0, 0, 0, 0.15);
+    --print-border: rgba(255, 255, 255, 0.15);
+    --hover: rgba(141, 141, 141, 0.1);
+    --yt-bg: #0F0F0F;
+
+    /* Primary */
+    --primary: rgb(255, 33, 33);
 }
 
 /* Reset */
@@ -62,7 +68,6 @@ body {
     background-color: var(--bg);
     color: var(--print);
     font-family: var(--font);
-    transition: background-color 0.2s ease, color 0.25s ease;
 }
 
 img {
@@ -246,6 +251,28 @@ body {
     font-weight: normal;
     font-size: 2rem;
     color: var(--primary);
+    position: relative;
+}
+
+.logo i::after {
+    content: "";
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    transform: translate(10px, -23px);
+    z-index: -1;
+}
+
+.tag span {
+    /* background-color: var(--hover); */
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 500;
+    padding: 5px;
+    text-transform: uppercase;
+    margin: 0 5px;
 }
 
 /* Layout */
@@ -289,6 +316,8 @@ form input, form textarea {
     border: 1px solid var(--print-border);
     outline: none;
     border-radius: var(--radius);
+    background-color: var(--bg);
+    color: var(--print);
 }
 
 form textarea {
@@ -326,7 +355,7 @@ form label {
 }
 
 .form-btn {
-    border: 1px solid var(--print-border);
+    border: 1px solid rgb(121, 121, 121);
     background-color: var(--bg);
     font-family: var(--font);
     font-size: 1.2rem;
@@ -401,12 +430,12 @@ form label {
 }
 
 .video {
-    background-color: #F9F9F9;
+    background-color: var(--yt-bg);
     border: 1px solid var(--print-border);
     display: flex;
     border-radius: var(--radius);
     flex: 1;
-    padding: 25px 15px;
+    padding: 15px 15px;
     overflow-x: auto;
 }
 
@@ -538,7 +567,7 @@ form label {
     border: 1px solid var(--print-border);
     border-radius: var(--radius);
     position: sticky;
-    top: calc(var(--nav-height) + 25px);
+    /* top: calc(var(--nav-height) + 25px); */
 }
 
 .sidebar-nav a {
@@ -629,6 +658,33 @@ table th:first-of-type {
 
 table th:last-of-type {
     border-top-right-radius: var(--radius);
+}
+
+/* Darkmode Toggle */
+
+.dm {
+    outline: none;
+    border: 1px solid var(--print-border);
+    font-family: var(--font);
+    padding: 10px 10px;
+    padding-right: 50px;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 0;
+    color: var(--print);
+    background-color: var(--bg);
+    font-size: 0.9rem;
+}
+
+.dm-icon {
+    position: absolute;
+    transform: translate(-26px, 10px);
+    font-size: 1.2rem;
+    color: var(--print);
+    pointer-events: none;
 }
 
 /* Mobile */

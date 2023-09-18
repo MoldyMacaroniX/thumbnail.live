@@ -4,18 +4,23 @@ layout: base.njk
 
 <div class="post">
     <div class="container">
-        <div class="cols">
-            <div class="sidebar">
-                <div class="sidebar-nav">
+        <div class="cols" id="sidebar-wrapper">
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-nav" id="sidebar-inner">
                     <div class="sidebar-nav-heading">Help Center</div>
                     <hr>
-                    <a href="/support/thumbnail/"{% if page.url == "/support/thumbnail/" %} class="active"{% endif %}>Preview Thumbnail Help</a>
-                    <a href="/support/feed/"{% if page.url == "/support/feed/" %} class="active"{% endif %}>Preview In Feed Help</a>
-                    <a href="/support/comment/"{% if page.url == "/support/comment/" %} class="active"{% endif %}>Preview Comment Help</a>
-                    <a href="/support/contact/"{% if page.url == "/support/contact/" %} class="active"{% endif %}>Contact us</a>
+                    <a href="/support/"{% if page.url == "/support/" %} class="active"{% endif %}>Getting Started</a>
+                    <a href="/support/thumbnail/"{% if page.url == "/support/thumbnail/" %} class="active"{% endif %}>How To Use This Website</a>
+                    <a href="/support/home/"{% if page.url == "/support/home/" %} class="active"{% endif %}>Home Preview Help</a>
+                    <a href="/support/up-next/"{% if page.url == "/support/up-next/" %} class="active"{% endif %}>Up Next Preview Help</a>
+                    <a href="/support/search/"{% if page.url == "/support/search/" %} class="active"{% endif %}>Search Preview Help</a>
+                    <a href="/support/feed/"{% if page.url == "/support/feed/" %} class="active"{% endif %}>In Feed Preview Help</a>
+                    <a href="/support/comment/"{% if page.url == "/support/comment/" %} class="active"{% endif %}>Comment Preview Help</a>
                     <hr>
-                    <div class="sidebar-nav-heading">Policies</div>
+                    <div class="sidebar-nav-heading">More Pages</div>
                     <hr>
+                    <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About us</a>
+                    <a href="/contact/"{% if page.url == "/contact/" %} class="active"{% endif %}>Contact us</a>
                     <a href="/privacy-policy/"{% if page.url == "/privacy-policy/" %} class="active"{% endif %}>Privacy Policy</a>
                 </div>
             </div>
@@ -27,3 +32,16 @@ layout: base.njk
         </div>
     </div>
 </div>
+
+<!-- Sidebar -->
+<script type="text/javascript" src="/assets/resize-sensor.js"></script>
+<script type="text/javascript" src="/assets/sidebar.js"></script>
+<script>
+    var sidebar = new StickySidebar('#sidebar', {
+        containerSelector: '#sidebar-wrapper',
+        innerWrapperSelector: '#sidebar-inner',
+        topSpacing: 95,
+        bottomSpacing: 25,
+        minWidth: 900
+    });
+</script>

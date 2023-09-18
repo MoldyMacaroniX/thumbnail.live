@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+body {
+    --yt-txt: #030303;
+    --yt-txt-dim: #606060;
+    --replies: #065fd4;
+}
+
+body.dark {
+    --yt-txt: #F1F1F1;
+    --yt-txt-dim: #868686;
+    --replies: #3EA6FF;
+}
+
 .content {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    color: #030303;
+    color: var(--yt-txt);
     word-wrap: break-word;
 }
 
@@ -54,7 +66,7 @@
 }
 
 .text .date {
-    color: #606060;
+    color: var(--yt-txt-dim);
     font-size: 0.96em;
 }
 
@@ -88,7 +100,7 @@
 }
 
 .likes {
-    color: #606060;
+    color: var(--yt-txt-dim);
     font-size: 0.96em;
     display: inline-block;
     margin-left: 5px;
@@ -110,7 +122,7 @@
 }
 
 .reply span {
-    color: #606060;
+    color: var(--yt-txt-dim);
     font-size: 0.90em;
     font-weight: 500;
 }
@@ -129,11 +141,11 @@
 
 .reply-down svg {
     margin-top: 6px;
-    fill: #065fd4;
+    fill: var(--replies);
 }
 
 .replies span {
-    color: #065fd4;
+    color: var(--replies);
     font-weight: 500;
 }
 

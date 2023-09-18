@@ -17,21 +17,22 @@ body.dark {
 }
 
 .content {
-    width: 331px;
-    min-height: 282px;
     background: rgba(255, 255, 255, 0);
     cursor: pointer;
-    display: block;
+    display: flex;
+    gap: 8px;
     margin: auto;
+    max-width: 100%;
 }
 
 .thumbnail {
     background: rgba(255, 255, 255, 0);
-    width: 331px;
-    height: 186px;
+    width: 168px;
+    height: 94px;
     position: relative;
-    border-radius: 13px;
+    border-radius: 9px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .thumbnail span {
@@ -56,10 +57,9 @@ body.dark {
 }
 
 .info {
-    width: 331px;
-    min-height: 96px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .avatar {
@@ -77,10 +77,10 @@ body.dark {
 
 .text .videotitle-input {
     display: block;
-    width: 259px;
-    margin-top: 12px;
-    margin-bottom: 7px;
-    font-size: 1.1em;
+    max-width: 259px;
+    margin-bottom: 3px;
+    font-size: 1em;
+    line-height: 1.3;
     font-weight: 500;
     overflow : hidden;
     text-overflow: ellipsis;
@@ -98,7 +98,7 @@ body.dark {
 }
 
 .text p {
-    font-size: 15px;
+    font-size: 13px;
     color: var(--yt-txt-dim);
     line-height: 20px;
     margin-top: 0px;
@@ -124,7 +124,8 @@ body.dark {
 
 .text .extra {
     display: block !important;
-    margin-top: -14px;
+    transform: translateY(-14px);
+    margin-bottom: 0;
     flex: none;
 }
 
