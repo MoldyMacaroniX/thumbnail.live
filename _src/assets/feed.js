@@ -30,7 +30,7 @@ var feed = [
         "title":"I Created Minecraft's NEW Rarest Armor",
         "creator":"Tap",
         "thumbnail":"https://img.youtube.com/vi/VsOlISiX3TA/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/jhEMNUduhEL20wX7rMooTe_y8znmxK6tUNGw47rIM0udd42xYJ-F2UMvkVRHw_5B5eW6mRWbBw=s176-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/AkJ9-qBk93TJ8xA1xdeO5Ig7LkFA9Yj9OD1AxkxAugrcKfOfGntqInFvws9hxc5HKT1G3o_8=s176-c-k-c0x00ffffff-no-rj",
         "views":"735K views",
         "time":"12 days ago",
         "length":"8:30"
@@ -120,7 +120,7 @@ var feed = [
         "title":"The Most BROKEN FNAF Fan Games...",
         "creator":"Echonex",
         "thumbnail":"https://img.youtube.com/vi/pMQ0e_ba1Ak/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/3CJoWkaLJPLfHFb9M_Rlbw9Xb7q-F4NcrDfOIJTIa6vClYysmoy-jztWq1fAht9mYoSb4Ln1MQ=s176-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/kHZwzFVuw-JsfiviJvXDzmt7ppuBZ5NYMV5BDfBrTgO7XhYU6qQsIgv91qBvkNiDF7_Kbby6=s176-c-k-c0x00ffffff-no-rj",
         "views":"17K views",
         "time":"13 days ago",
         "length":"13:01"
