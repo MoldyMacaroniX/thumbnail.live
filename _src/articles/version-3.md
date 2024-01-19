@@ -1,6 +1,6 @@
 ---
 title: Thumbnail.live Version 3 Changelog
-date: 2023-11-18
+date: 2024-01-18
 ---
 
 # Thumbnail.live Version 3 Changelog
