@@ -5,6 +5,7 @@ layout: base.njk
 <div class="post">
     <div class="container">
         <div class="cols" id="sidebar-wrapper">
+            {% if not isBlog %}
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-nav" id="sidebar-inner">
                     <div class="sidebar-nav-heading">Help Center</div>
@@ -24,11 +25,34 @@ layout: base.njk
                     <a href="/privacy-policy/"{% if page.url == "/privacy-policy/" %} class="active"{% endif %}>Privacy Policy</a>
                 </div>
             </div>
+            {% endif %}
             <div class="col">
                 <article class="article">
                     {{ content | safe }}
                 </article>
+                {% if isBlog and page.url != "/articles/" %}
+                <a href="/articles/" class="btn" style="margin-top: 25px;">See More Articles</a>
+                {% endif %}
+                {% if page.url == "/articles/" %}
+                <a href="/support/" class="btn" style="margin-top: 25px;">Help Center</a>
+                {% endif %}
             </div>
+            {% if isBlog %}
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-nav" id="sidebar-inner">
+                    <div class="sidebar-nav-heading">Preview Your Thumbnail</div>
+                    <hr>
+                    <a href="/">In YouTube Homepage</a>
+                    <a href="/up-next/">In YouTube Up Next</a>
+                    <a href="/search/">In YouTube Search</a>
+                    <a href="/feed/">In YouTube Feed</a>
+                    <hr>
+                    <div class="sidebar-nav-heading">Preview Your Comment</div>
+                    <hr>
+                    <a href="/comment/">YouTube Comment Previewer</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -4,11 +4,11 @@ title: Privacy Policy
 
 # Privacy Policy
 
-At Thumbnail.live, we take privacy very seriously. We will never store anything you input on our site on our server. If you have any questions about this privacy policy, [feel free to contact us](/support/contact/).
+At Thumbnail.live, we take privacy very seriously. We will never store anything you input on our site on our server. If you have any questions about this Privacy Policy, [feel free to contact us](/support/contact/).
 
 ## Consent
 
-By using this website, you consent to this privacy policy and its terms.
+By using this website, you consent to this Privacy Policy and its terms.
 
 ## Data you upload to our site
 
@@ -16,7 +16,9 @@ Nothing you upload to our site is stored on our server in any way.
 
 ## localStorage
 
-This website makes use of a technology called localStorage to save what you input to your browser. This data exists solely in your browser and we cannot access it. You can clear this data at any time using your browser. This is usually done by clearing your cookies.
+This website makes use of a technology called localStorage to save what you input to your browser. This data exists solely in your browser and we do not store it on our server.
+
+You can clear this data at any time with your browser. This is usually done by clearing your cookies.
 
 ## Usage data
 

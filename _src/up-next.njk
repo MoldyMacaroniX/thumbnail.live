@@ -26,10 +26,6 @@ tool: upNext
                         <input type="text" id="thumbnailurl" name="thumbnailurl" placeholder="https://example.com/file.png" onchange="genVideo();">
                         <div class="warn">Leave blank to use uploaded file.</div>
                     </div>
-                    <div class="input combo">
-                        <label for="videotitle">Video Title</label>
-                        <input type="text" id="videotitle" name="videotitle" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
-                    </div>
 
                 </form>
             </div>
@@ -55,32 +51,19 @@ tool: upNext
 
                 </div>
 
-                <button class="btn btn-wide" onclick="genVideo();">Preview Thumbnail</button>
-
             </div>
             <div class="sidebar">
                 <form onsubmit="genVideo(); return false;">
 
                     <div class="input combo">
-                        <label for="avatarupload">Upload Avatar</label>
-
-                        <div class="upload-btn-wrapper">
-                            <label for="avatarupload" class="aspect">
-                                <div id="avatarupload-btn" style="background-image: url('https://www.moldygd.com/assets/logo.png');" class="form-btn ratio"><span>Upload File</span></div>
-                            </label>
-                            <input type="file" accept="image/*" id="avatarupload" name="avatarupload" onchange="uploadAvatar();genVideo();">
-                        </div>
-
-                        <div class="divider"><span>OR</span></div>
-
-                        <label for="avatarurl">Paste Avatar URL</label>
-                        <input type="text" id="avatarurl" name="avatarurl" placeholder="https://example.com/file.png" onchange="genVideo();">
-                        <div class="warn">Leave blank to use uploaded file.</div>
+                        <label for="videotitle">Video Title</label>
+                        <input type="text" id="videotitle" name="videotitle" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
                     </div>
                     <div class="input combo">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Moldy" onchange="genVideo();" maxlength="30">
                     </div>
+                    <button class="btn btn-wide" onclick="genVideo();">Preview Thumbnail</button>
 
                 </form>
             </div>

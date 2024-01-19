@@ -1,0 +1,6 @@
+{
+    "layout":"post.njk",
+    "permalink":"/articles/{{ pageSlug or page.fileSlug }}/",
+    "isBlog":true,
+    "tags":"blog"
+}

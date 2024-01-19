@@ -6,6 +6,10 @@ module.exports = (config) => {
     config.addPassthroughCopy('_src/_data');
     config.addPassthroughCopy({'_src/static':  '.'});
 
+    config.addFilter("date", dateObj => {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL d, yyyy");
+    });
+
     return {
         dir: {
             input: '_src',
