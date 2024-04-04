@@ -35,10 +35,15 @@ function genVideo() {
         document.getElementById("videotitle-input").innerText = document.getElementById("videotitle").value;
     }
     // Set Avatar URL
-    if (document.getElementById("avatarurl").value !== '') {
-        document.getElementById("avatarurl-input").src = document.getElementById("avatarurl").value;
-    } else if (avatarupload != null) {
-        document.getElementById("avatarurl-input").src = avatarupload;
+    // Error check cause Up Next page won't have it
+    try {
+        if (document.getElementById("avatarurl").value !== '') {
+            document.getElementById("avatarurl-input").src = document.getElementById("avatarurl").value;
+        } else if (avatarupload != null) {
+            document.getElementById("avatarurl-input").src = avatarupload;
+        }
+    } catch (e) {
+        console.log("This err is normal for Up next page: " + e);
     }
     // Set Username
     if (document.getElementById("username").value !== '') {
@@ -55,7 +60,12 @@ function save() {
     localStorage.setItem("thumbnail-saved", true)
     localStorage.setItem("thumbnail-thumbnailurl", document.getElementById("thumbnailurl").value);
     localStorage.setItem("thumbnail-videotitle", document.getElementById("videotitle").value);
-    localStorage.setItem("thumbnail-avatarurl", document.getElementById("avatarurl").value);
+    // Error check cause Up Next page won't have it
+    try {
+        localStorage.setItem("thumbnail-avatarurl", document.getElementById("avatarurl").value);
+    } catch (e) {
+        console.log("This err is normal for Up next page: " + e);
+    }
     localStorage.setItem("thumbnail-username", document.getElementById("username").value);
 }
 
@@ -66,7 +76,12 @@ function load() {
     if (localStorage.getItem("thumbnail-saved")) {
         document.getElementById("thumbnailurl").value = localStorage.getItem("thumbnail-thumbnailurl");
         document.getElementById("videotitle").value = localStorage.getItem("thumbnail-videotitle");
-        document.getElementById("avatarurl").value = localStorage.getItem("thumbnail-avatarurl");
+        // Error check cause Up Next page won't have it
+        try {
+            document.getElementById("avatarurl").value = localStorage.getItem("thumbnail-avatarurl");
+        } catch (e) {
+            console.log("This err is normal for Up next page: " + e);
+        }
         document.getElementById("username").value = localStorage.getItem("thumbnail-username");
         genVideo();
     }
