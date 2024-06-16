@@ -42,6 +42,34 @@ body.dark {
     --primary: rgb(255, 33, 33);
 }
 
+body.light {
+    --bg: white;
+    --print: black;
+    --print-dim: rgba(0, 0, 0, 0.75);
+    --bg-border: rgba(255, 255, 255, 0.25);
+    --print-border: rgba(0, 0, 0, 0.25);
+    --hover: rgba(128, 128, 128, 0.1);
+    --yt-bg: #F9F9F9;
+
+    /* Primary */
+    --primary: rgb(255, 0, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg: rgb(20, 20, 20);
+        --print: rgb(255, 255, 255);
+        --print-dim: rgba(255, 255, 255, 0.75);
+        --bg-border: rgba(0, 0, 0, 0.15);
+        --print-border: rgba(255, 255, 255, 0.15);
+        --hover: rgba(141, 141, 141, 0.1);
+        --yt-bg: #0F0F0F;
+
+        /* Primary */
+        --primary: rgb(255, 33, 33);
+    }
+}
+
 /* Reset */
 
 .preload, .preload * {
@@ -503,6 +531,16 @@ form label {
     font-size: 1.5rem;
 }
 
+/* Meta */
+
+.meta .meta-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: var(--primary);
+}
+
 /* Article */
 
 .article {
@@ -512,6 +550,7 @@ form label {
     border: 1px solid var(--print-border);
     padding: 25px;
     border-radius: var(--radius);
+    min-width: 0;
 }
 
 .article h1 {
@@ -541,6 +580,22 @@ form label {
 
 .article strong {
     color: var(--print);
+}
+
+.article code {
+    color: var(--print);
+    font-family: monospace;
+}
+
+.article pre {
+    background-color: black;
+    padding: 15px;
+    border-radius: var(--radius);
+    overflow: auto;
+}
+
+.article pre code {
+    color: white !important;
 }
 
 .article ul {
@@ -851,8 +906,21 @@ table th:last-of-type {
 }
 
 @media only screen and (max-width: 500px) {
+    .meta .meta-title {
+        font-size: 1.75rem;
+    }
     .main .cols {
         flex-direction: column !important;
+    }
+    .article h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+    .article h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.1;
     }
     .main .sidebar {
         width: 100%;

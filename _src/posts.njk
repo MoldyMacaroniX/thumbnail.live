@@ -1,0 +1,14 @@
+---
+layout: post.njk
+isBlog: true
+noArticle: true
+showDesc: true
+title: YouTube Thumbnail Guides
+desc: Learn how to preview your YouTube thumbnail to maximize results.
+---
+
+<div class="sidebar-nav" id="sidebar-inner">
+    {% for post in collections.posts %}
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% endfor %}
+</div>

@@ -138,7 +138,7 @@ var feed = [
         "title":"The Race to Beat Silent Clubstep (Geometry Dash)",
         "creator":"MathGenius",
         "thumbnail":"https://img.youtube.com/vi/Rfzce7rmC5Y/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/L-TzwTdpZ45fY6zeOetKEmu-adngQwXSs_RcwZb5gMii772iaBs9ApMSl3O42qyRuMOJfucejAs=s176-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/Y8rESU1Ak_g17pacA_lgRBI5Z4BZQ_3tM37MFz58jKmXP5ptlp_CrrUU6nBXzrHL3e-j0ijfZw=s176-c-k-c0x00ffffff-no-rj",
         "views":"1.4M views",
         "time":"10 months ago",
         "length":"35:37"

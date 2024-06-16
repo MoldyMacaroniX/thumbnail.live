@@ -27,11 +27,18 @@ layout: base.njk
             </div>
             {% endif %}
             <div class="col">
-                <article class="article">
-                    {{ content | safe }}
-                </article>
+                {% if isBlog %}
+                <div class="meta" style="margin-bottom: 25px;">
+                    <h1 class="meta-title">{{ title }}</h1>
+                    {% if date %}<b style="margin-top: 15px; display: flex; font-size: 1.2rem; align-items: center; gap: 5px;"><i class="ri-time-line" style="font-size: 1.4rem; font-weight: normal;"></i> {{ date | date }}</b>{% endif %}
+                    {% if showDesc %}<b style="margin-top: 15px; display: flex; font-size: 1.2rem; align-items: center; gap: 5px;">{{ desc }}</b>{% endif %}
+                </div>
+                {% endif %}
+                {% if not noArticle %}<article class="article">{% else %}<div>{% endif %}
+                {{ content | safe }}
+                {% if not noArticle %}</article>{% else %}</div>{% endif %}
                 {% if isBlog and page.url != "/articles/" %}
-                <a href="/articles/" class="btn" style="margin-top: 25px;">See More Articles</a>
+                <a href="/posts/" class="btn" style="margin-top: 25px;">See All Articles</a>
                 {% endif %}
                 {% if page.url == "/articles/" %}
                 <a href="/support/" class="btn" style="margin-top: 25px;">Help Center</a>

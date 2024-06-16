@@ -1,0 +1,5 @@
+{
+    "isBlog":"true",
+    "layout":"post.njk",
+    "tags":"posts"
+}
