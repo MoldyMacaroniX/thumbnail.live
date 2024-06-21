@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-body {
+body, body.light {
     --yt-txt: #030303;
     --yt-txt-dim: #606060;
     --replies: #065fd4;
@@ -10,6 +10,14 @@ body.dark {
     --yt-txt: #F1F1F1;
     --yt-txt-dim: #868686;
     --replies: #3EA6FF;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --yt-txt: #F1F1F1;
+        --yt-txt-dim: #868686;
+        --replies: #3EA6FF;
+    }
 }
 
 .content {

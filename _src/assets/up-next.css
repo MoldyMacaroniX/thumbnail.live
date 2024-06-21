@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-body {
+body, body.light {
     --thumbnail: url(https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg);
     --verified: unset;
     --truncate: 2;
@@ -14,6 +14,13 @@ body {
 body.dark {
     --yt-txt-dim: #868686;
     --verified: #AAAAAA;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --yt-txt-dim: #868686;
+        --verified: #AAAAAA;
+    }
 }
 
 .content {
