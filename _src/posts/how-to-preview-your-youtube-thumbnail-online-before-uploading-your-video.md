@@ -24,7 +24,7 @@ In addition, you can see how your thumbnail will look on the up next page, on th
 
 # Use inspect element to edit your thumbnail onto the YouTube home page
 
-You can use a browser tool called **inspect element** to edit your thumbnail onto the YouTube. By highlighting the text you want to change and right clicking, you can press **inspect element** to edit the page's source code. You can then replace the text with your video title.
+You can use a browser tool called **inspect element** to edit your thumbnail onto YouTube. By highlighting the text you want to change and right clicking, you can press **inspect element** to edit the page's source code. You can then replace the text with your video title.
 
 To change a YouTube video thumbnail with inspect element, right click the video's thumbnail and edit its source to be a link to your thumbnail.
 
