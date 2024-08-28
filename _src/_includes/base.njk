@@ -279,6 +279,7 @@
     <script>
         window.onload = (event) => {
             document.body.classList.remove('preload');
+            openExtLinks();
         };
     </script>
 
@@ -319,7 +320,7 @@
 
      <!-- Open external links in a new tab -->
     <script>
-        window.onload = function() {
+        function openExtLinks() {
             for (var links = document.links, i = 0, a; a = links[i]; i++) {
                 if (a.host !== location.host) {
                         a.target = '_blank';
