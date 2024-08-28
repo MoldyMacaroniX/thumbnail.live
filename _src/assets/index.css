@@ -519,7 +519,7 @@ form label {
     background-color: var(--print-border);
     color: transparent;
     user-select: none;
-    font-size: 0.4rem;
+    font-size: 7px;
     border-radius: 4px;
 }
 
@@ -531,7 +531,7 @@ form label {
     background-color: var(--print-border);
     color: transparent;
     user-select: none;
-    font-size: 0.2rem;
+    font-size: 3px !important;
     width: fit-content;
     border-radius: 4px;
 }
