@@ -1,5 +1,5 @@
 ---
-title: How To Preview Your YouTube Thumbnail Online Before Uploading Your Video
+title: How To Preview Your YouTube Thumbnail Before Uploading Your Video
 desc: If you've ever wanted to preview your YouTube thumbnail before posting your video so you can see what it will look like alongside your video title and channel logo, you may have struggled to find the tools to do that. Whether you just want to send your video packaging to friends for feedback or just want to optimize your thumbnail for viewing on YouTube, this guide is for you.
 date: 2024-06-16
 ---

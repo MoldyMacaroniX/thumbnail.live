@@ -1,0 +1,27 @@
+<div class="mobile-options">
+    <div class="mobile-option-hero">
+        <h1>Preview your thumbnail in multiple formats</h1>
+    </div>
+    <div class="mobile-option-formats">
+        <a href="/" class="preview-option{% if page.url == "/" %} active{% endif %}">
+            {% include 'skels/home.njk' %}
+        </a>
+        <a href="/up-next/" class="preview-option{% if page.url == "/up-next/" %} active{% endif %}">
+            {% include 'skels/up-next.njk' %}
+            {% include 'skels/up-next.njk' %}
+            {% include 'skels/up-next.njk' %}
+        </a>
+        <a href="/search/" class="preview-option{% if page.url == "/search/" %} active{% endif %}">
+            {% include 'skels/search.njk' %}
+            {% include 'skels/search.njk' %}
+        </a>
+        <a href="/feed/" class="preview-option{% if page.url == "/feed/" %} active{% endif %}">
+            <div class="grid-2" style="gap: 6px;">
+                {% include 'skels/feed.njk' %}
+                {% include 'skels/feed.njk' %}
+                {% include 'skels/feed.njk' %}
+                {% include 'skels/feed.njk' %}
+            </div>
+        </a>
+    </div>
+</div>

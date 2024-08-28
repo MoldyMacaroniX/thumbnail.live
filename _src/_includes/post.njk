@@ -64,6 +64,10 @@ layout: base.njk
     </div>
 </div>
 
+{% if page.url !== "/privacy-policy/" %}
+    {% include 'partials/formats.njk' %}
+{% endif %}
+
 <!-- Sidebar -->
 <script type="text/javascript" src="/assets/resize-sensor.js"></script>
 <script type="text/javascript" src="/assets/sidebar.js"></script>
