@@ -31,13 +31,13 @@ To change a YouTube video thumbnail with inspect element, right click the video'
 For example, the code for a YouTube thumbnail image will look similar to this:
 
 ```html
-<img src="youtube.com/thumbnail.png">
+<img src="https://youtube.com/thumbnail.png">
 ```
 
 So simply change the `src` value to a link to your thumbnail image.
 
 ```html
-<img src="example.com/your-thumbnail.png">
+<img src="https://example.com/your-thumbnail.png">
 ```
 
 Note that inspect element is not permanent and the page will revert to what it was originally if you refresh the browser tab.

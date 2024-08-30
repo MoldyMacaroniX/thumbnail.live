@@ -127,12 +127,12 @@
                 <a href="/" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></a>
                 <div class="items">
                     {# <div class="tag"><span>Thumbnail View:</span></div> #}
-                    <a href="/" class="item{% if page.url == "/" or page.url == "/up-next/" or page.url == "/search/" or page.url == "/feed/" %} active{% endif %}">Preview Thumbnail</a>
+                    <a href="/" class="item{% if page.url == "/" or page.url == "/up-next/" or page.url == "/search/" or page.url == "/feed/" %} active{% endif %}"><i class="ri-image-line"></i> Preview Thumbnail</a>
                     {# <a href="/up-next/" class="item{% if page.url == "/up-next/" %} active{% endif %}">Up Next</a>
                     <a href="/search/" class="item{% if page.url == "/search/" %} active{% endif %}">Search</a>
                     <a href="/feed/" class="item{% if page.url == "/feed/" %} active{% endif %}">In Feed</a> #}
-                    <a href="/comment/" class="item{% if page.url == "/comment/" %} active{% endif %}">Preview Comment</a>
-                    <a href="/posts/" class="item{% if page.url == "/posts/" %} active{% endif %}">Thumbnail Guides</a>
+                    <a href="/comment/" class="item{% if page.url == "/comment/" %} active{% endif %}"><i class="ri-message-2-line"></i> Preview Comment</a>
+                    <a href="/posts/" class="item{% if (page.url == "/posts/") or isBlog %} active{% endif %}"><i class="ri-information-line"></i> Thumbnail Guides</a>
                 </div>
             </div>
             <div class="right">

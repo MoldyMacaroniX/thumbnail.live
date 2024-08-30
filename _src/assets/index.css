@@ -258,10 +258,20 @@ body {
     padding: 0 15px;
     transition: 0.25s ease background-color;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .item.active {
-    font-weight: bold;
+    /* font-weight: bold; */
+    background-color: var(--hover);
+}
+
+.item i {
+    font-weight: normal !important;
+    color: var(--primary);
+    font-size: 1.2em;
 }
 
 .item:hover {
@@ -715,14 +725,14 @@ form label {
 }
 
 .article pre {
-    background-color: black;
+    background-color: var(--hover);
     padding: 15px;
     border-radius: var(--radius);
     overflow: auto;
 }
 
 .article pre code {
-    color: white !important;
+    color: var(--print) !important;
 }
 
 .article ul {
@@ -988,9 +998,6 @@ table th:last-of-type {
     .grid-4 {
         grid-template-columns: 1fr 1fr;
     }
-}
-
-@media only screen and (max-width: 900px) {
     .items {
         display: none;
     }
@@ -1014,6 +1021,9 @@ table th:last-of-type {
     .navbar {
         height: var(--nav-height);
     }
+}
+
+@media only screen and (max-width: 900px) {
     .main .cols {
         flex-wrap: wrap;
     }
