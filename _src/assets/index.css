@@ -55,6 +55,14 @@ body.light {
     --primary: rgb(255, 0, 0);
 }
 
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+    color-scheme: light;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         --bg: rgb(20, 20, 20);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-scheme="system">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +61,7 @@
     <script>
         var currentTheme = localStorage.getItem("theme");
         {# var matched = window.matchMedia('(prefers-color-scheme: dark)').matches; #}
+        var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         if (currentTheme == "system") {
             setSystem();
@@ -74,19 +75,39 @@
             setDark();
         }
 
+        if (currentTheme == null) {
+            setSystem();
+        }
+
         function setSystem() {
             document.body.classList.remove('dark');
             document.body.classList.remove('light');
+            document.documentElement.style.overflow = "hidden";
+            if (isDarkMode) {
+                document.documentElement.setAttribute("data-color-scheme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-color-scheme", "light");
+            }
+            document.body.clientWidth;
+            document.documentElement.style.overflow = "";
         }
         
         function setDark() {
             document.body.classList.add('dark');
             document.body.classList.remove('light');
+            document.documentElement.style.overflow = "hidden";
+            document.documentElement.setAttribute("data-color-scheme", "dark");
+            document.body.clientWidth;
+            document.documentElement.style.overflow = "";
         }
 
         function setLight() {
             document.body.classList.add('light');
             document.body.classList.remove('dark');
+            document.documentElement.style.overflow = "hidden";
+            document.documentElement.setAttribute("data-color-scheme", "light");
+            document.body.clientWidth;
+            document.documentElement.style.overflow = "";
         }
     </script>
 
