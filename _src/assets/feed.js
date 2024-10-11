@@ -21,7 +21,7 @@ var feed = [
         "title":"This Geometry Dash Puzzle Has A Crazy Solution",
         "creator":"Moldy",
         "thumbnail":"https://img.youtube.com/vi/LWCsyvfkcSo/maxresdefault.jpg",
-        "avatar":"https://www.moldygd.com/assets/logo.png",
+        "avatar":"/assets/channel_logo.png",
         "views":"1.5M views",
         "time":"9 months ago",
         "length":"10:03"
