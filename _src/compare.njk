@@ -1,0 +1,214 @@
+---
+layout: base.njk
+title: Compare Your YouTube Thumbnails
+desc: Compare your YouTube thumbnails and see how they will look on YouTube.
+tool: compare
+---
+
+<div class="main feed-tool">
+    <div class="container">
+        <div class="cols">
+            <div class="col">
+                <div class="col-title">Video #1<div class="col-title-div"></div></div>
+                <form onsubmit="genVideo(); return false;">
+
+                    <div class="input combo">
+                        <label for="thumbnailupload">Upload Thumbnail</label>
+
+                        <div class="upload-btn-wrapper">
+                            <label for="thumbnailupload" class="aspect">
+                                <div id="thumbnailupload-btn" style="background-image: url('https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg');" class="form-btn ratio"><span>Upload File</span></div>
+                            </label>
+                            <input type="file" accept="image/*" id="thumbnailupload" name="thumbnailupload" onchange="uploadThumbnail();genVideo();">
+                        </div>
+
+                        <div class="divider"><span>OR</span></div>
+
+                        <label for="thumbnailurl">Paste Thumbnail URL</label>
+                        <input type="text" id="thumbnailurl" name="thumbnailurl" placeholder="https://example.com/file.png" onchange="genVideo();">
+                        <div class="warn">Leave blank to use uploaded file.</div>
+                    </div>
+                    <div class="input combo">
+                        <label for="videotitle">Video Title</label>
+                        <input type="text" id="videotitle" name="videotitle" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
+                    </div>
+
+                </form>
+            </div>
+            <div class="col">
+                <div class="col-title">Video #2<div class="col-title-div"></div></div>
+                <form onsubmit="genVideo(); return false;">
+
+                    <div class="input combo">
+                        <label for="thumbnailupload2">Upload Thumbnail</label>
+
+                        <div class="upload-btn-wrapper">
+                            <label for="thumbnailupload2" class="aspect">
+                                <div id="thumbnailupload2-btn" style="background-image: url('https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg');" class="form-btn ratio"><span>Upload File</span></div>
+                            </label>
+                            <input type="file" accept="image/*" id="thumbnailupload2" name="thumbnailupload2" onchange="uploadThumbnail2();genVideo();">
+                        </div>
+
+                        <div class="divider"><span>OR</span></div>
+
+                        <label for="thumbnailurl2">Paste Thumbnail URL</label>
+                        <input type="text" id="thumbnailurl2" name="thumbnailurl2" placeholder="https://example.com/file.png" onchange="genVideo();">
+                        <div class="warn">Leave blank to use uploaded file.</div>
+                    </div>
+                    <div class="input combo">
+                        <label for="videotitle2">Video Title</label>
+                        <input type="text" id="videotitle2" name="videotitle2" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
+                    </div>
+
+                </form>
+            </div>
+            <div class="col">
+                <div class="col-title">Video #3<div class="col-title-div"></div></div>
+                <form onsubmit="genVideo(); return false;">
+
+                    <div class="input combo">
+                        <label for="thumbnailupload3">Upload Thumbnail</label>
+
+                        <div class="upload-btn-wrapper">
+                            <label for="thumbnailupload3" class="aspect">
+                                <div id="thumbnailupload3-btn" style="background-image: url('https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg');" class="form-btn ratio"><span>Upload File</span></div>
+                            </label>
+                            <input type="file" accept="image/*" id="thumbnailupload3" name="thumbnailupload3" onchange="uploadThumbnail3();genVideo();">
+                        </div>
+
+                        <div class="divider"><span>OR</span></div>
+
+                        <label for="thumbnailurl3">Paste Thumbnail URL</label>
+                        <input type="text" id="thumbnailurl3" name="thumbnailurl3" placeholder="https://example.com/file.png" onchange="genVideo();">
+                        <div class="warn">Leave blank to use uploaded file.</div>
+                    </div>
+                    <div class="input combo">
+                        <label for="videotitle3">Video Title</label>
+                        <input type="text" id="videotitle3" name="videotitle3" placeholder="I Played Would You Rather In Geometry Dash" onchange="genVideo();">
+                    </div>
+
+                </form>
+            </div>
+            <div class="col">
+                <div class="col-title">Your Channel<div class="col-title-div"></div></div>
+                <form onsubmit="genVideo(); return false;">
+
+                    <div class="input combo">
+                        <label for="avatarupload">Upload Avatar</label>
+
+                        <div class="upload-btn-wrapper">
+                            <label for="avatarupload" class="aspect">
+                                <div id="avatarupload-btn" style="background-image: url('/assets/channel_logo.png');" class="form-btn ratio"><span>Upload File</span></div>
+                            </label>
+                            <input type="file" accept="image/*" id="avatarupload" name="avatarupload" onchange="uploadAvatar();genVideo();">
+                        </div>
+
+                        <div class="divider"><span>OR</span></div>
+
+                        <label for="avatarurl">Paste Avatar URL</label>
+                        <input type="text" id="avatarurl" name="avatarurl" placeholder="https://example.com/file.png" onchange="genVideo();">
+                        <div class="warn">Leave blank to use uploaded file.</div>
+                    </div>
+                    <div class="input combo">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Moldy" onchange="genVideo();" maxlength="30">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="btn-if-wide" style="margin-top: 25px;">
+            <div class="btn-if-wide-div"></div>
+            <button class="btn btn-wide" onclick="genVideo();">Compare Thumbnails</button>
+            <div class="btn-if-wide-div"></div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="container">
+        <div class="video-container">
+
+            <div class="video" style="gap: 15px; justify-content: center; flex-wrap: wrap;">
+                
+                <div class="content" style="margin: unset;">
+                    <div class="thumbnail">
+                        <span id="length">10:46</span>
+                        <div class="thumbnail-img"></div>
+                    </div>
+                    <div class="info">
+                        <img id="avatarurl-input" src="/assets/channel_logo.png" class="avatar">
+                        <div class="text">
+                            <div id="videotitle-input" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                            <p><span class="name"><span id="username-input" class="username-input">Moldy</span></span> <div class="verified">
+                                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                            </div></p>
+                            <p class="extra"><span id="views">4.1K views</span> • <span id="time">2 hours ago</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" style="margin: unset;">
+                    <div class="thumbnail">
+                        <span id="length">10:46</span>
+                        <div class="thumbnail-img" style="background-image: var(--thumbnail2);"></div>
+                    </div>
+                    <div class="info">
+                        <img id="avatarurl-input2" src="/assets/channel_logo.png" class="avatar">
+                        <div class="text">
+                            <div id="videotitle-input2" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                            <p><span class="name"><span id="username-input2" class="username-input">Moldy</span></span> <div class="verified">
+                                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                            </div></p>
+                            <p class="extra"><span id="views">4.1K views</span> • <span id="time">2 hours ago</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" style="margin: unset;">
+                    <div class="thumbnail">
+                        <span id="length">10:46</span>
+                        <div class="thumbnail-img" style="background-image: var(--thumbnail3);"></div>
+                    </div>
+                    <div class="info">
+                        <img id="avatarurl-input3" src="/assets/channel_logo.png" class="avatar">
+                        <div class="text">
+                            <div id="videotitle-input3" class="videotitle-input">I Played Would You Rather In Geometry Dash</div>
+                            <p><span class="name"><span id="username-input3" class="username-input">Moldy</span></span> <div class="verified">
+                                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z" class="style-scope yt-icon"></path></g></svg>
+                            </div></p>
+                            <p class="extra"><span id="views">4.1K views</span> • <span id="time">2 hours ago</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% include 'partials/formats.njk' %}
+
+<div>
+    <div class="container">
+        <article class="article">
+            <h1>Compare YouTube Thumbnails</h1>
+            <p>
+                Compare your YouTube thumbnails with Thumbnail.live and see how they will look on YouTube.
+            </p>
+            <p>
+                This tool allows you to upload three video thumbnails and titles to see how they will look next to each other. That way, you can visually see which one stands out the most.
+            </p>
+            <p>
+                You can submit links to your thumbnail and avatar if its already online and save the hassle of having to find them in your files.
+            </p>
+            <p>
+                Everything you input (excluding uploaded files) is stored on your browser, meaning you don't have to re-enter your avatar link and username every time.
+            </p>
+            <p>
+                Uploaded files are not stored, so if you want to retain your thumbnail and avatar, you always have the option to use links instead.
+            </p>
+        </article>
+    </div>
+</div>

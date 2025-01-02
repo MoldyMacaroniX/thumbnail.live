@@ -2,6 +2,8 @@
 
 body, body.light {
     --thumbnail: url(https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg);
+    --thumbnail2: url(https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg);
+    --thumbnail3: url(https://img.youtube.com/vi/nuB-Ru9ZOAc/maxresdefault.jpg);
     --verified: unset;
     --truncate: 2;
     --premiere: none;

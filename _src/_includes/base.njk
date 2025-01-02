@@ -18,7 +18,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/index.css">
-    {% if tool == "thumbnail" or tool == "feed" %}<link rel="stylesheet" href="/assets/thumbnail.css">{% endif %}
+    {% if tool == "thumbnail" or tool == "feed" or tool == "compare" %}<link rel="stylesheet" href="/assets/thumbnail.css">{% endif %}
     {% if tool == "upNext" %}<link rel="stylesheet" href="/assets/up-next.css">{% endif %}
     {% if tool == "search" %}<link rel="stylesheet" href="/assets/search.css">{% endif %}
     {% if tool == "comment" %}<link rel="stylesheet" href="/assets/comment.css">{% endif %}
@@ -31,6 +31,9 @@
     <meta property="og:site_name" content="Thumbnail.live">
     <meta property="og:description" content="{{ desc or metadata.desc }}">
     <meta property="og:image" content="/assets/og.png">
+
+    <!-- Oembed -->
+    <link type="application/json+oembed" href="https://www.thumbnail.live/oembed.json">
 
     <!-- Twitter since they're different or something -->
     <meta property="twitter:card" content="summary_large_image">
@@ -120,9 +123,10 @@
             <hr>
             {% include 'partials/formats-mobile.njk' %}
             <hr>
-            <a href="/" class="mobile-link">Preview Thumbnail</a>
-            <a href="/comment/" class="mobile-link">Preview Comment</a>
-            <a href="/posts/" class="mobile-link">Thumbnail Guides <div class="count">NEW</div></a>
+            {# <a href="/" class="mobile-link">Preview Thumbnail</a>
+            <a href="/compare/" class="mobile-link">Preview Thumbnail <div class="count">NEW</div></a>
+            <a href="/comment/" class="mobile-link">Preview Comment</a> #}
+            {# <a href="/posts/" class="mobile-link">Thumbnail Guides <div class="count">NEW</div></a> #}
             {# {{ collections.posts | length }} #}
             {# <a href="/" class="mobile-link">Home</a>
             <a href="/up-next/" class="mobile-link">Up Next</a>
@@ -149,11 +153,11 @@
                 <div class="items">
                     {# <div class="tag"><span>Thumbnail View:</span></div> #}
                     <a href="/" class="item{% if page.url == "/" or page.url == "/up-next/" or page.url == "/search/" or page.url == "/feed/" %} active{% endif %}"><i class="ri-image-line"></i> Preview Thumbnail</a>
+                    <a href="/compare/" class="item{% if page.url == "/compare/" %} active{% endif %}"><i class="ri-flask-line"></i> Compare Thumbnails</a>
                     {# <a href="/up-next/" class="item{% if page.url == "/up-next/" %} active{% endif %}">Up Next</a>
                     <a href="/search/" class="item{% if page.url == "/search/" %} active{% endif %}">Search</a>
                     <a href="/feed/" class="item{% if page.url == "/feed/" %} active{% endif %}">In Feed</a> #}
                     <a href="/comment/" class="item{% if page.url == "/comment/" %} active{% endif %}"><i class="ri-message-2-line"></i> Preview Comment</a>
-                    <a href="/posts/" class="item{% if (page.url == "/posts/") or isBlog %} active{% endif %}"><i class="ri-information-line"></i> Thumbnail Guides</a>
                 </div>
             </div>
             <div class="right">
@@ -245,14 +249,15 @@
                             <a href="/up-next/" class="foot-link">Up Next</a>
                             <a href="/search/" class="foot-link">Search</a>
                             <a href="/feed/" class="foot-link">In Feed</a>
+                            <a href="/compare/" class="foot-link">Compare</a>
                             <a href="/comment/" class="foot-link">Comment</a>
-                            <a href="/posts/" class="foot-link">Guides</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="logo">Support</div>
                         <div class="grid-2">
                             <a href="/support/" class="foot-link">Help Center</a>
+                            <a href="/posts/" class="foot-link">Guides</a>
                             <a href="/about/" class="foot-link">About us</a>
                             <a href="/contact/" class="foot-link">Contact us</a>
                             <a href="/privacy-policy/" class="foot-link">Privacy Policy</a>
@@ -301,6 +306,7 @@
 
     {% if tool == "thumbnail" or tool == "feed" or tool == "upNext" or tool == "search" %}<script src="/assets/thumbnail.js"></script>{% endif %}
     {% if tool == "feed" %}<script src="/assets/feed.js"></script>{% endif %}
+    {% if tool == "compare" %}<script src="/assets/compare.js"></script>{% endif %}
     {% if tool == "comment" %}<script src="/assets/comment.js"></script>{% endif %}
 
     <!-- Preload animation stop -->

@@ -405,6 +405,40 @@ form label {
     height: 0px;
 }
 
+.btn-if-wide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn-if-wide .btn {
+    width: fit-content;
+}
+
+.btn-if-wide div {
+    flex: 1;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: var(--radius);
+}
+
+.col-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.col-title-div {
+    flex: 1;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: var(--radius);
+}
+
 .form-btn {
     border: 1px solid rgb(121, 121, 121);
     background-color: var(--bg);
@@ -455,6 +489,72 @@ form label {
     color: var(--primary);
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+/* Tool cards */
+
+.other-tools-mobile {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.other-tools-mobile h1 {
+    font-size: 1.25rem !important;
+}
+
+.other-tools-mobile p {
+    font-size: 0.9rem !important;
+}
+
+.tools-card {
+    border: 3px solid var(--primary);
+    padding: 15px;
+    border-radius: var(--radius);
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tools-card i {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.tools-card h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.tools-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--print-dim);
+}
+
+.tools-card-tool {
+    background-color: var(--hover);
+    padding: 15px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tools-card-tool h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.tools-card-tool p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--print-dim);
+}
+
+.tools-card-tool .btn {
+    width: 100%;
+    margin-top: auto;
 }
 
 /* Preview options */
@@ -1097,6 +1197,9 @@ table th:last-of-type {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
+    .other-tools {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1162,5 +1265,12 @@ table th:last-of-type {
         margin-left: -50vw;
         margin-right: -50vw;
         border-radius: 0;
+    }
+    .btn-if-wide .btn {
+        width: 100%;
+    }
+    
+    .btn-if-wide div {
+        display: none;
     }
 }
