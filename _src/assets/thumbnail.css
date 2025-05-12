@@ -46,11 +46,11 @@ body.dark {
 .thumbnail span {
     position: absolute;
     color: white;
-    right: 0;
-    bottom: 0;
+    right: 3px;
+    bottom: 3px;
     font-size: 14px;
     background: rgba(0, 0, 0, 0.85);
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 2px 4px;
     margin: 4px;
     display: var(--live-time);
@@ -59,6 +59,7 @@ body.dark {
 .thumbnail-img {
     width: 100%;
     height: 100%;
+    background-color: var(--print-border);
     background-image: var(--thumbnail);
     background-size: cover !important;
     background-position: center !important;
@@ -72,6 +73,7 @@ body.dark {
 }
 
 .avatar {
+    background-color: var(--print-border);
     height: 36px;
     width: 36px;
     border-radius: 50%;

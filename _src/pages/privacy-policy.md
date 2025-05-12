@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Privacy Policy
 
-At Thumbnail.live, we take privacy very seriously. This Privacy Policy will outline what information we collect and how we use it. If you have any questions about this Privacy Policy, [feel free to contact us](/support/contact/).
+At Thumbnail.live, we take privacy very seriously. This Privacy Policy will outline what information we collect and how we use it. If you have any questions about this Privacy Policy, [feel free to contact us](/contact/).
 
 ## Consent
 

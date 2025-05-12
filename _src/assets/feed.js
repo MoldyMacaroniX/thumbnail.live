@@ -3,7 +3,7 @@ var feed = [
         "title":"7 Days Stranded At Sea",
         "creator":"MrBeast",
         "thumbnail":"https://img.youtube.com/vi/yhB3BgJyGl8/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"89M views",
         "time":"4 days ago",
         "length":"9:01"
@@ -48,7 +48,7 @@ var feed = [
         "title":"I Explored MrBeast's Abandoned Minecraft Server",
         "creator":"FitMC",
         "thumbnail":"https://img.youtube.com/vi/9WSh1xdpyqI/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"3M views",
         "time":"4 months ago",
         "length":"10:46"
@@ -57,7 +57,7 @@ var feed = [
         "title":"Would You Rather Have $10,000 or This Mystery Box!",
         "creator":"MrBeast Gaming",
         "thumbnail":"https://img.youtube.com/vi/D5tvW00SZFc/hqdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/ytc/AIdro_lMiSL6eHqg2dVxvll6mVMeXo1qVak4TZ4_7mEWdobRRCk=s900-c-k-c0x00ffffff-no-rj",
         "views":"24M views",
         "time":"1 month ago",
         "length":"8:01"
@@ -84,7 +84,7 @@ var feed = [
         "title":"World's Most Dangerous Escape Room!",
         "creator":"MrBeast",
         "thumbnail":"https://img.youtube.com/vi/3jS_yEK8qVI/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"223M views",
         "time":"1 year ago",
         "length":"8:36"
@@ -93,7 +93,7 @@ var feed = [
         "title":"I Got Hunted By The FBI",
         "creator":"MrBeast",
         "thumbnail":"https://img.youtube.com/vi/hxwpkM5w3Cc/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"172M views",
         "time":"2 years ago",
         "length":"11:45"
@@ -102,7 +102,7 @@ var feed = [
         "title":"Would YOU Quit School For $100,000?",
         "creator":"MrBeast",
         "thumbnail":"https://img.youtube.com/vi/urtFrxDUV6c/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"139M views",
         "time":"2 years ago",
         "length":"10:12"
@@ -111,7 +111,7 @@ var feed = [
         "title":"1,000 Deaf People Hear For The First Time",
         "creator":"MrBeast",
         "thumbnail":"https://img.youtube.com/vi/WTOm65IZneg/maxresdefault.jpg",
-        "avatar":"https://yt3.googleusercontent.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s160-c-k-c0x00ffffff-no-rj",
+        "avatar":"https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s900-c-k-c0x00ffffff-no-rj",
         "views":"105M views",
         "time":"3 months ago",
         "length":"11:45"
