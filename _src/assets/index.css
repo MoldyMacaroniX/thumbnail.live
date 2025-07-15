@@ -747,6 +747,11 @@ form label {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--primary);
+    transition: 0.25s ease color;
+}
+
+.foot-link:hover {
+    color: var(--primary);
 }
 
 .footer p {
@@ -1046,6 +1051,7 @@ table th:last-of-type {
 .dm {
     outline: none;
     border: 1px solid var(--print-border);
+    transition: border 0.25s ease;
     font-family: var(--font);
     padding: 10px 10px;
     padding-right: 50px;
@@ -1058,6 +1064,10 @@ table th:last-of-type {
     color: var(--print);
     background-color: var(--bg);
     font-size: 0.9rem;
+}
+
+.dm:hover {
+    border: 1px solid var(--print);
 }
 
 .dm-icon {
