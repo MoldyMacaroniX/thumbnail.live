@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: Download YouTube Thumbnails
+desc: Download any YouTube video's thumbnail in HD quality.
+tool: download
+---
+
+<div class="main">
+    <div class="container">
+        <div class="layout">
+            <form onsubmit="showThumbnail(); return false;">
+                <div class="input combo">
+                    <label for="videoURL">Video URL</label>
+                    <input type="text" id="videoURL" name="videoURL" placeholder="https://youtu.be/XG7EEldrxAE" onchange="showThumbnail();">
+                </div>
+            </form>
+            <div class="cols">
+                <div class="col">
+                    <div class="layout">
+                        <div class="col-title" style="margin: 0;">Full HD Thumbnail<div class="col-title-div"></div></div>
+                        <div class="yt-thumbnail">
+                            <div class="aspect"><img id="thumb-hd" src="https://img.youtube.com/vi/XG7EEldrxAE/maxresdefault.jpg" alt=""></div>
+                        </div>
+                        <a id="thumb-hd-a" class="btn btn-wide" href="https://img.youtube.com/vi/XG7EEldrxAE/maxresdefault.jpg" download>Download Thumbnail (HD)</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="layout">
+                        <div class="col-title" style="margin: 0;">Medium Thumbnail<div class="col-title-div"></div></div>
+                        <div class="yt-thumbnail">
+                            <div class="aspect"><img id="thumb-normal" src="https://img.youtube.com/vi/XG7EEldrxAE/hqdefault.jpg" alt=""></div>
+                        </div>
+                        <a id="thumb-normal-a" class="btn btn-wide" href="https://img.youtube.com/vi/XG7EEldrxAE/hqdefault.jpg" download>Download Thumbnail (Medium)</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="layout">
+                        <div class="col-title" style="margin: 0;">Small Thumbnail<div class="col-title-div"></div></div>
+                        <div class="yt-thumbnail">
+                            <div class="aspect"><img id="thumb-small" src="https://img.youtube.com/vi/XG7EEldrxAE/mqdefault.jpg" alt=""></div>
+                        </div>
+                        <a id="thumb-small-a" class="btn btn-wide" href="https://img.youtube.com/vi/XG7EEldrxAE/mqdefault.jpg" download>Download Thumbnail (Small)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/formats.njk' %}
+
+<div>
+    <div class="container">
+        <article class="article">
+            <h1>Download YouTube Thumbnails</h1>
+            <p>
+                Download any YouTube video's thumbnail in HD quality with this online YouTube thumbnail downloader.
+            </p>
+            <h2>Why download YouTube thumbnails?</h2>
+            <p>
+                There are many reasons to download YouTube thumbnails. For example, if you're learning thumbnail design, it could be useful to view thumbnails you like in high quality to use as inspiration.
+            </p>
+            <p>
+                You might also want to use YouTube thumbnails in things you create. Just make sure you have permission from the copyright holder or are otherwise abiding by fair use.
+            </p>
+            <h2>Why does the medium thumbnail have black bars on the top and bottom when downloaded?</h2>
+            <p>
+                This is not a bug, but something that YouTube does on their end. You can sometimes even see it when sharing a link to a video where that is the highest quality thumbnail available.
+            </p>
+            <h2>What are the different YouTube thumbnail qualities?</h2>
+            <p>
+                YouTube has three different quality versions of every thumbnail: HD, Medium, and Small. This tool allows you to download whatever version you like, but we recommend downloading the HD version of a thumbnail if it is available because it is the highest quality.
+            </p>
+        </article>
+    </div>
+</div>

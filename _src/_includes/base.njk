@@ -156,10 +156,22 @@
                     {# <a href="/up-next/" class="item{% if page.url == "/up-next/" %} active{% endif %}">Up Next</a>
                     <a href="/search/" class="item{% if page.url == "/search/" %} active{% endif %}">Search</a>
                     <a href="/feed/" class="item{% if page.url == "/feed/" %} active{% endif %}">In Feed</a> #}
-                    <a href="/comment/" class="item{% if page.url == "/comment/" %} active{% endif %}"><i class="ri-message-2-line"></i> Preview Comment</a>
+                    <a href="/download/" class="item{% if page.url == "/download/" %} active{% endif %}"><i class="ri-download-line"></i> Download Thumbnail</a>
                 </div>
             </div>
             <div class="right">
+                <div class="dropdown">
+                    <div href="/comment/" class="item">More <i class="ri-arrow-down-s-line item-hover-flip"></i></div>
+                    <div class="dropdown-content">
+                        <a href="/" class="show-on-nav-remove{% if page.url == "/" %} active{% endif %}"><i class="ri-image-line"></i><span>Preview Thumbnail</span></a>
+                        <a href="/compare/" class="show-on-nav-remove{% if page.url == "/compare/" %} active{% endif %}"><i class="ri-flask-line"></i><span>Compare Thumbnails</span></a>
+                        <a href="/comment/" class="show-on-nav-remove{% if page.url == "/comment/" %} active{% endif %}"><i class="ri-message-2-line"></i><span>Preview Comment</span></a>
+                        <a href="/comment/"{% if page.url == "/comment/" %} class="active"{% endif %}><i class="ri-message-2-line"></i><span>Preview Comment</span></a>
+                        <a href="/posts/"{% if page.url == "/posts/" %} class="active"{% endif %}><i class="ri-book-line"></i><span>Thumbnail Guides</span></a>
+                        <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}><i class="ri-information-line"></i><span>About us</span></a>
+                        <a href="/contact/"{% if page.url == "/contact/" %} class="active"{% endif %}><i class="ri-mail-line"></i><span>Contact us</span></a>
+                    </div>
+                </div>
                 <a href="/support/" class="btn"><span class="txt">Help Center</span><span class="icon"><i class="ri-question-fill"></i></span></a>
             </div>
         </div>
@@ -249,7 +261,8 @@
                             <a href="/search/" class="foot-link">Search</a>
                             <a href="/feed/" class="foot-link">In Feed</a>
                             <a href="/compare/" class="foot-link">Compare</a>
-                            <a href="/comment/" class="foot-link">Comment</a>
+                            {# <a href="/comment/" class="foot-link">Comment</a> #}
+                            <a href="/download/" class="foot-link">Download</a>
                         </div>
                     </div>
                     <div class="col">
@@ -307,6 +320,7 @@
     {% if tool == "feed" %}<script src="/assets/feed.js"></script>{% endif %}
     {% if tool == "compare" %}<script src="/assets/compare.js"></script>{% endif %}
     {% if tool == "comment" %}<script src="/assets/comment.js"></script>{% endif %}
+    {% if tool == "download" %}<script src="/assets/download.js"></script>{% endif %}
 
     <!-- Preload animation stop -->
     <script>

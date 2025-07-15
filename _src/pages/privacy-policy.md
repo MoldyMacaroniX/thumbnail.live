@@ -19,6 +19,10 @@ For more information, see the following:
 - [Google's Privacy & Terms](https://policies.google.com/technologies/partner-sites)
 - [Google's "Safeguarding your data" help page](https://support.google.com/analytics/answer/6004245)
 
+## jsDelivr
+
+We use jsDelivr. [See their Privacy Policy here](https://www.jsdelivr.com/terms/privacy-policy).
+
 ## Information we collect
 
 If you [contact us](/contact/), we will recieve everything you send us, such as your email address and the contents of any emails that you send us.
