@@ -303,6 +303,11 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
     gap: 5px;
+    transition: 0.25s ease color;
+}
+
+a.logo:hover {
+    color: var(--primary);
 }
 
 .logo span {

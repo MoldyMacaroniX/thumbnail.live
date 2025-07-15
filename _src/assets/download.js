@@ -3,7 +3,7 @@ function showThumbnail() {
     // get URL
     url = document.getElementById("videoURL").value;
     var id;
-    // https://stackoverflow.com/a/9102270
+    // https://stackoverflow.com/a/27728417
     var rx = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
     id = url.match(rx); // stored in id[1]
     // Check if ID found
@@ -16,7 +16,7 @@ function showThumbnail() {
 
     document.getElementById("thumb-normal").src = "https://img.youtube.com/vi/" + id[1] + "/hqdefault.jpg";
     document.getElementById("thumb-normal-a").href = "https://img.youtube.com/vi/" + id[1] + "/hqdefault.jpg";
-    
+
     document.getElementById("thumb-small").src = "https://img.youtube.com/vi/" + id[1] + "/mqdefault.jpg";
     document.getElementById("thumb-small-a").href = "https://img.youtube.com/vi/" + id[1] + "/mqdefault.jpg";
 }
