@@ -22,6 +22,11 @@
     {% if tool == "upNext" %}<link rel="stylesheet" href="/assets/up-next.css">{% endif %}
     {% if tool == "search" %}<link rel="stylesheet" href="/assets/search.css">{% endif %}
     {% if tool == "comment" %}<link rel="stylesheet" href="/assets/comment.css">{% endif %}
+    {% if tool == "chat" %}
+    <link rel="stylesheet" href="/assets/chat.css" id="chat-css">
+    <link id="shoelace" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script id="shoelace-script" type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    {% endif %}
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Opengraph -->
@@ -98,7 +103,7 @@
         }
         
         function setDark() {
-        document.body.classList.add('preload');
+            document.body.classList.add('preload');
             document.body.classList.add('dark');
             document.body.classList.remove('light');
             document.documentElement.style.overflow = "hidden";
@@ -109,7 +114,7 @@
         }
 
         function setLight() {
-        document.body.classList.add('preload');
+            document.body.classList.add('preload');
             document.body.classList.add('light');
             document.body.classList.remove('dark');
             document.documentElement.style.overflow = "hidden";
@@ -172,6 +177,7 @@
                         <a href="/" class="show-on-nav-remove{% if page.url == "/" %} active{% endif %}"><i class="ri-image-line"></i><span>Preview Thumbnail</span></a>
                         <a href="/compare/" class="show-on-nav-remove{% if page.url == "/compare/" %} active{% endif %}"><i class="ri-flask-line"></i><span>Compare Thumbnails</span></a>
                         <a href="/download/" class="show-on-nav-remove{% if page.url == "/download/" %} active{% endif %}"><i class="ri-download-line"></i><span>Download Thumbnail</span></a>
+                        <a href="/stream-chat-generator/"{% if page.url == "/stream-chat-generator/" %} class="active"{% endif %}><i class="ri-base-station-line"></i><span>Stream Chat Generator</span></a>
                         <a href="/comment/"{% if page.url == "/comment/" %} class="active"{% endif %}><i class="ri-message-2-line"></i><span>Preview Comment</span></a>
                         <a href="/posts/"{% if page.url == "/posts/" %} class="active"{% endif %}><i class="ri-book-line"></i><span>Thumbnail Guides</span></a>
                         <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}><i class="ri-information-line"></i><span>About us</span></a>
@@ -327,6 +333,7 @@
     {% if tool == "compare" %}<script src="/assets/compare.js"></script>{% endif %}
     {% if tool == "comment" %}<script src="/assets/comment.js"></script>{% endif %}
     {% if tool == "download" %}<script src="/assets/download.js"></script>{% endif %}
+    {% if tool == "chat" %}<script src="/assets/chat.js"></script>{% endif %}
 
     <!-- Preload animation stop -->
     <script>

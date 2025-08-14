@@ -1,0 +1,112 @@
+body, body.light {
+    --yt-txt-dim: #707070;
+    --yt-hover: #F2F2F2;
+    --chat-bg: rgb(255, 255, 255);
+}
+
+body.dark {
+    --yt-txt-dim: #B7B7B7;
+    --yt-hover: #272727;
+    --chat-bg: #0F0F0F;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --yt-txt-dim: #B7B7B7;
+        --yt-hover: #272727;
+        --chat-bg: #0F0F0F;
+    }
+}
+
+#chat-here {
+    opacity: 1 !important;
+}
+
+.video {
+    position: relative;
+}
+
+.content {
+    background-color: var(--chat-bg);
+    border: 1px solid var(--print-border);
+    border-radius: var(--radius);
+    padding: 20px 0px;
+    max-width: 100%;
+    resize: horizontal;
+    min-width: 280px !important;
+    overflow: auto;
+    flex: 1;
+    min-width: 0;
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    padding: 5px 25px;
+    position: relative;
+    /* align-items: center; */
+}
+
+.message:hover {
+    background-color: var(--yt-hover);
+    cursor: pointer;
+}
+
+.message:hover::after {
+    content:"Click to delete";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.content img {
+    object-fit: cover;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--print-border);
+}
+
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    min-width: 0;
+}
+
+.text {
+    font-size: 20px;
+    min-width: 0;
+}
+
+.username {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--yt-txt-dim) !important;
+    font-weight: 500;
+}
+
+.username.rank-moderator {
+    color: #5F84F1 !important;
+}
+
+.username img {
+    width: 22px;
+    height: 22px;
+}
+
+.text-inner {
+    display: inline;
+    word-wrap: break-word;
+}

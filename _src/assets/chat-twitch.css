@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body, body.light {
+    --twitch-hover: #F2F2F2;
+    --twitch-print: #0e0e10;
+    --chat-bg: rgb(255, 255, 255);
+}
+
+body.dark {
+    --twitch-hover: #3D3D40;
+    --twitch-print: #efeff1;
+    --chat-bg: #18181B;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --twitch-hover: #3D3D40;
+        --twitch-print: #efeff1;
+        --chat-bg: #18181B;
+    }
+}
+
+#chat-here {
+    opacity: 1 !important;
+}
+
+.video {
+    position: relative;
+}
+
+.content {
+    background-color: var(--chat-bg);
+    border: 1px solid var(--print-border);
+    border-radius: var(--radius);
+    padding: 20px 0px;
+    max-width: 100%;
+    resize: horizontal;
+    min-width: 280px !important;
+    overflow: auto;
+    flex: 1;
+    min-width: 0;
+}
+
+.avatar {
+    display: none;
+}
+
+.username {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-weight: bold;
+    height: 32px;
+    transform: translateY(9px);
+}
+
+.username::before {
+    content: ":";
+    font-weight: normal !important;
+    color: var(--twitch-print) !important;
+}
+
+.username::after {
+    content:"";
+    height: 32px;
+}
+
+.text-inner {
+    display: inline;
+    color: var(--twitch-print);
+    /* height: 32px; */
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    padding: 0px 25px;
+    padding-bottom: 9px;
+    position: relative;
+    /* align-items: center; */
+    margin: -10px 0;
+}
+
+.message:hover {
+    background-color: var(--twitch-hover);
+    cursor: pointer;
+}
+
+.message:hover::after {
+    content:"Click to delete";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.content img {
+    object-fit: cover;
+}
+
+.text {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    line-height: 2rem;
+    min-width: 0;
+}
+
+.text-wrapper {
+    min-width: 0;
+}
+
+.badge img {
+    height: 27px;
+    margin-right: 5px;
+}

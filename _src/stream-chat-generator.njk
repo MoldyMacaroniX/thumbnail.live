@@ -1,0 +1,167 @@
+---
+layout: base.njk
+title: Stream Chat Generator For YouTube And Twitch
+desc: Generate a YouTube or Twitch live stream chat for thumbnails!
+tool: chat
+---
+
+<style>
+    #chat-here {
+        opacity: 0;
+    }
+</style>
+
+<div class="main chat-tool">
+    <div class="container">
+        <div class="cols chat-cols">
+            <div class="sidebar">
+                
+                <form onsubmit="return false;">
+
+                    <div class="messages">
+                        <div class="input combo">
+
+                            <label for="avatarupload">Upload Avatar</label>
+
+                            <div class="upload-btn-wrapper">
+                                <label for="avatarupload" class="aspect">
+                                    <div id="avatarupload-btn" style="background-image: url('/assets/channel_logo.png');" class="form-btn ratio"><span>Upload File</span></div>
+                                </label>
+                                <input type="file" accept="image/*" id="avatarupload" name="avatarupload" onchange="uploadAvatar();">
+                            </div>
+
+                            <div class="divider"><span>OR</span></div>
+
+                            <label for="avatarurl">Paste Avatar URL</label>
+                            <input type="text" id="avatarurl" name="avatarurl" placeholder="https://example.com/file.png">
+                            <div class="warn">Leave blank to use uploaded file.</div>
+
+                            <div class="invis-divider"></div>
+
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Moldy" maxlength="30">
+
+                            <div class="invis-divider"></div>
+
+                            <label for="message">Message</label>
+                            <input type="text" id="message" name="message" placeholder="Hey what is going on chat" maxlength="200">
+
+                            <div class="invis-divider"></div>
+
+                            <div style="gap: 10px; display: flex;">
+                                <div class="col layout" style="gap: 5px; flex-direction: column !important; order: unset !important;">
+                                    <label for="rank">Rank</label>
+                                    <div>
+                                        <select class="dm" style="width: 100%;" name="rank" id="rank">
+                                            <option value="none">None</option>
+                                            <option value="verified">Verified</option>
+                                            {# <option value="member">Member</option> #}
+                                            <option value="moderator">Moderator</option>
+                                            {# <option value="streamer">Streamer</option> #}
+                                        </select>
+                                        <i class="ri-arrow-down-s-line dm-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="layout" style="gap: 5px;">
+                                    <label for="color">Color</label>
+                                    <div class="color-picker-wrapper">
+                                        <sl-color-picker label="Select a color" name="color" id="color"></sl-color-picker>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-wide" onclick="genChat();">Add Message</button>
+
+                </form>
+            </div>
+            <div class="col video-container">
+
+                {# <div class="video"> #}
+                    <div class="content" id="chat-here">
+
+                        {# <div class="message" onclick="deleteMessage(this);">
+                            <img class="avatar" src="/assets/channel_logo.png" alt="" onerror="this.src='/assets/avatar_fallback.png'">
+                            <div class="text-wrapper">
+                                <div class="text">
+                                    <div class="username" style="color: #FF0000"><span>Moldr</span><span class="badge"><img class="badge-img" src="/assets/verified.svg" alt="" onerror="this.src='/assets/avatar_fallback.png'"></span></div>
+                                    <div class="text-inner">My PC will overheat with death effects :D</div>
+                                </div>
+                            </div>
+                        </div> #}
+
+                    </div>
+                {# </div> #}
+
+                {# <button class="btn btn-wide" onclick="genChat();">Generate Chat</button> #}
+
+            </div>
+            <div class="sidebar">
+                <form onsubmit="setPlatform(); return false;">
+
+                    <div class="input combo">
+                        <label for="platform">Platform</label>
+                        <div>
+                            <select class="dm" style="width: 100%;" name="platform" id="platform" onchange="setPlatform();">
+                                <option value="youtube">YouTube</option>
+                                <option value="twitch">Twitch</option>
+                            </select>
+                            <i class="ri-arrow-down-s-line dm-icon"></i>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-wide" onclick="setPlatform();">Set Platform</button>
+
+                </form>
+                <div class="alert" style="margin-top: 25px;">
+                    <div style="display: flex; gap: 15px;">
+                        <i class="ri-information-fill"></i>
+                        <div class="col">
+                            <div class="alert-heading">
+                                Your selected avatar will only apply on YouTube and your selected color will only apply on Twitch.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/formats.njk' %}
+
+<div>
+    <div class="container">
+        <article class="article">
+            <h1>Stream Chat Generator for YouTube and Twitch</h1>
+            <p>
+                With this online stream chat generator, you can generate stream chats in the style of either YouTube or Twitch.
+            </p>
+            <h2>How to use this thumbnail comparison tool?</h2>
+            <p>
+                For each message, enter a username, enter a message, and choose a rank (none, verified, or moderator). You can also select an avatar for YouTube and a color for Twitch.
+            </p>
+            <h2>What uses does this comment generator have?</h2>
+            <p>
+                You can use this live stream chat generator for a few reasons:
+            </p>
+            <ul>
+                <li>You can see roughly how your chat message will look on YouTube and Twitch before posting it</li>
+                <li>You can generate high quality chat messages for videos</li>
+                <li>You can generate a stream chat for a thumbnail</li>
+            </ul>
+            <h2>Using links and saving your username and avatar</h2>
+            <p>
+                You can upload your avatar or submit a link to it if its already online so you can save the hassle of having to find it in your files.
+            </p>
+            <p>
+                Everything you input (excluding uploaded files) is stored on your browser, meaning you don't have to re-enter your avatar and username every time.
+            </p>
+            <p>
+                Uploaded files are not stored, so if you want to retain your avatar, you always have the option to use a link instead.
+            </p>
+        </article>
+    </div>
+</div>
