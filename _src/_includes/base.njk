@@ -159,7 +159,12 @@
                 <div class="menu-open" onclick="openMobile();" onkeydown="if (event.keyCode === 13) {openMobile()}" id="open" tabindex="0">
                     <i class="ri-menu-fill"></i>
                 </div>
-                <a href="/" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></a>
+                <a href="/" class="logo">
+                    {# <i class="ri-play-circle-fill"></i> #}
+                    <img src="/assets/icon.png" alt="">
+                    {# https://www.dafont.com/solgas.font #}
+                    <span>Thumbnail.live</span>
+                </a>
                 <div class="items">
                     {# <div class="tag"><span>Thumbnail View:</span></div> #}
                     <a href="/" class="item{% if page.url == "/" or page.url == "/up-next/" or page.url == "/search/" or page.url == "/feed/" %} active{% endif %}"><i class="ri-image-line"></i> Preview Thumbnail</a>
@@ -252,7 +257,7 @@
             <div class="footer container">
                 <div class="cols">
                     <div class="col">
-                        <div style="transform: translateY(-3px);" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></div>
+                        <div style="transform: translateY(-3px);" class="logo"><img src="/assets/icon.png" alt=""><span>Thumbnail.live</span></div>
                         <p>
                             {{ metadata.desc }}
                         </p>
