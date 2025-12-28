@@ -128,8 +128,8 @@
     <div class="mobile" id="menu">
         <i class="ri-close-fill menu-close" id="close" onclick="closeMobile()" onkeydown="if (event.keyCode === 13) {closeMobile()}" tabindex="0"></i>
         <div style="display: flex; flex-direction: column; height: 100%; width: 100%;">
-            <div class="mobile-padding">
-                <a href="/" class="logo"><i class="ri-play-circle-fill"></i><span>Thumbnail.live</span></a>
+            <div class="mobile-padding" style="height: 65px; flex-shrink: 0; display: flex; align-items: center;">
+                <a href="/" class="logo"><img src="/assets/icon.png" alt=""><span>Thumbnail.live</span></a>
             </div>
             <hr>
             {% include 'partials/formats-mobile.njk' %}
